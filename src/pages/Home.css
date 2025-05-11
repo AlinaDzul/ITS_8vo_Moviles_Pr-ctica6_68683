@@ -1,0 +1,15 @@
+.pack-content {
+    --background: #fffde7;
+}
+.pack-item {
+    --background: #ffeb3b;
+    --border-radius: 10px;
+    margin: 10px 0;
+    --padding-start: 20px;
+    --padding-end: 20px;
+}
+.pack-item ion-label {
+    font-weight: bold;
+    color: #424242;
+    font-size: 1.1rem;
+}

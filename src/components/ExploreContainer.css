@@ -6,19 +6,23 @@
   top: 50%;
   transform: translateY(-50%);
 }
-
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+#picture {
+  height: 150px;
+  background: #000;
+  color: #fff;
+  padding: 10px;
+  border: 2px solid #fff;
+  border-radius: 5px;
 }
-
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-  color: #8c8c8c;
+ion-img {
+  max-width: 100px;
+  max-height: 100px;
+}
+h2 {
+  font-size: 1.2rem;
+  margin: 5px 0;
+}
+p {
+  font-size: 0.9rem;
   margin: 0;
-}
-
-#container a {
-  text-decoration: none;
 }

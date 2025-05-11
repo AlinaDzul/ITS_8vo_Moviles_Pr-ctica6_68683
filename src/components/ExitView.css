@@ -1,0 +1,39 @@
+.exit-view {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #a00000;
+    font-family: var(--font-pokemon, Arial, sans-serif);
+}
+
+.exit-box {
+    background: #d3d3d3;
+    border: 2px solid #000;
+    border-radius: 8px;
+    padding: 0.5rem;
+    text-align: center;
+    width: 90%;
+    max-width: 220px;
+    box-shadow: 0 0 6px #000;
+}
+
+.exit-box h1 {
+    font-size: 1rem;
+    color: #ffcc00;
+    text-shadow: 1px 1px #000;
+    margin-bottom: 0.25rem;
+}
+
+.exit-box p {
+    font-size: 0.7rem;
+    color: #000;
+    margin-bottom: 0.5rem;
+}
+
+.exit-box ion-button {
+    margin: 0.25rem 0;
+    --padding-top: 6px;
+    --padding-bottom: 6px;
+    font-size: 0.7rem;
+}

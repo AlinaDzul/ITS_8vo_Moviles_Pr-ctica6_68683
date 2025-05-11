@@ -1,52 +1,29 @@
-import { faCaretRight } from "@fortawesome/free-solid-svg-icons"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { useContext } from "react"
-import { EPokedexMenuOption, MenuPokedexContext } from "../../contexts/MenuPokedexContext"
+import { IonText } from '@ionic/react';
+import { useContext } from 'react';
+import { EPokedexMenuOption, MenuPokedexContext } from '../../contexts/MenuPokedexContext';
+import './PokedexMenu.css';
 
-export const PokedexMenu = () => {
-  const { menuOption } = useContext(MenuPokedexContext)
+const PokedexMenu: React.FC = () => {
+    const { menuOption } = useContext(MenuPokedexContext);
 
-  const isSelected = (selectedOption: EPokedexMenuOption) => {
-    return menuOption === selectedOption
-  }
+    return (
+        <div className="menu-container font-pokemon">
+            <div className="crt-screen">
+                <div className="menu-icon">🎮</div>
+                <IonText>
+                    <h2>¡Bienvenido, Entrenador!</h2>
+                    <p className="menu-option active">
+                        ▶ {EPokedexMenuOption[menuOption]}
+                    </p>
+                    <p className="menu-instruction">
+                        Usa la <span className="highlight">cruceta</span> para navegar <br />
+                        y el <span className="highlight">botón azul</span> para seleccionar.
+                    </p>
+                </IonText>
+            </div>
+        </div>
+    );
+};
 
-  return (
-    <div className="font-pokemon text-xs !m-2 !p-2  border-3 border-double border-black rounded-md h-[calc(100%-1rem)]">
-      <ul>
-        <li>
-          <div className="flex flex-row justify-end">
-            <FontAwesomeIcon
-              className={`${isSelected(EPokedexMenuOption.POKEDEX) ? "" : "!hidden"
-                }`}
-              icon={faCaretRight}
-            />
-            <span className="w-full"></span>
-            <span>Pokedex</span>
-          </div>
-        </li>
-        <li>
-          <div className="flex flex-row justify-end">
-            <FontAwesomeIcon
-              className={`${isSelected(EPokedexMenuOption.PACK) ? "" : "!hidden"
-                }`}
-              icon={faCaretRight}
-            />
-            <span className="w-full"></span>
-            <span>Objetos</span>
-          </div>
-        </li>
-        <li>
-          <div className="flex flex-row justify-end">
-            <FontAwesomeIcon
-              className={`${isSelected(EPokedexMenuOption.EXIT) ? "" : "!hidden"
-                }`}
-              icon={faCaretRight}
-            />
-            <span className="w-full"></span>
-            <span>Salir</span>
-          </div>
-        </li>
-      </ul>
-    </div>
-  )
-}
+export default PokedexMenu;
+
